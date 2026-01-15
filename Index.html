@@ -120,4 +120,40 @@
     // Ejemplo: 34123456789 para +34 123 456 789
   </script>
 </body>
-</html>
+</html> ,
+Mi Tienda — MVP (GitHub Pages)
+
+Sitio estático para lanzamiento rápido (landing + catálogo). Deploy en GitHub Pages.
+
+Estructura:
+- index.html
+- styles.css
+- assets/images/
+
+Cómo desplegar (resumen):
+1. Subir archivos al repo.
+2. Settings > Pages -> Source: main / root.
+3. (Opcional) Añadir CNAME con dominio propio y configurar DNS.
+4. Activar "Enforce HTTPS".
+
+Notas:
+- Reemplaza COUNTRYCODENUMBER en los enlaces WhatsApp por tu número internacional sin + (ej. 34123456789).
+- Reemplaza los enlaces de pago por Payment Links de Stripe o PayPal.Me.
+- Optimiza imágenes y prueba una compra real de prueba. ,
+<script>
+  // Reemplaza con tu número (sin +)
+  const WHATSAPP_NUMBER = "34123456789";
+
+  function makeWhatsAppLink(productName, price) {
+    const text = `Hola, quiero comprar "${productName}". Precio: ${price}. Nombre: [Tu nombre]. Dirección: [Dirección completa]. ¿Hay stock?`;
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+  }
+
+  // Ejemplo: asignar al botón de producto con data-attrs
+  document.querySelectorAll('.product-card').forEach(card => {
+    const name = card.querySelector('h3').innerText;
+    const price = card.querySelector('.price').innerText;
+    const waBtn = card.querySelector('.card-ctas .btn.small');
+    if (waBtn) waBtn.href = makeWhatsAppLink(name, price);
+  });
+</script>
