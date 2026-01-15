@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mi Tienda — Productos seleccionados</title>
+  <meta name="description" content="Compra [NombreMarca]: productos seleccionados, envío rápido y atención por WhatsApp." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <img src="https://via.placeholder.com/140x40?text=LOGO" alt="Logo" />
+      </div>
+      <nav class="nav-cta">
+        <a class="btn small" href="#catalogo">Ver productos</a>
+        <a class="btn primary" id="contact-btn" href="https://wa.me/COUNTRYCODENUMBER?text=Hola%20quiero%20más%20info">Comprar por WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Propuesta de valor -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Lo mejor en [tu categoría] — envío rápido y pago simple</h1>
+          <p class="lead">Selección curada de productos que resuelven [problema clave]. Compra seguro y recibe en 24–72h.</p>
+          <div class="hero-ctas">
+            <a href="#catalogo" class="btn large">Ver catálogo</a>
+            <a href="https://wa.me/COUNTRYCODENUMBER?text=Hola%20quiero%20comprar" class="btn outline">Comprar por WhatsApp</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=80&auto=format&fit=crop" alt="Producto destacado" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios rápidos -->
+    <section class="benefits container">
+      <ul>
+        <li>Envío rápido y seguimiento</li>
+        <li>Paga con enlace seguro (Stripe / PayPal)</li>
+        <li>Atención inmediata por WhatsApp</li>
+      </ul>
+    </section>
+
+    <!-- Catálogo simple -->
+    <section id="catalogo" class="catalog container">
+      <h2>Catálogo</h2>
+      <p class="muted">Elige un producto y pulsa "Comprar" para recibir el enlace de pago o chatear por WhatsApp.</p>
+
+      <div class="product-grid">
+        <!-- Producto 1 -->
+        <article class="product-card">
+          <img src="https://via.placeholder.com/600x400?text=Producto+1" alt="Producto 1" />
+          <h3>Producto 1</h3>
+          <p class="price">€29.00</p>
+          <p class="desc">Breve descripción del producto 1 — beneficio clave en una línea.</p>
+          <div class="card-ctas">
+            <!-- Cambia WHATSAPP_NUMBER y el mensaje -->
+            <a class="btn small" href="https://wa.me/COUNTRYCODENUMBER?text=Hola%20quiero%20comprar%20Producto%201">Comprar por WhatsApp</a>
+            <!-- Enlace de pago directo (ej: Stripe / PayPal payment link) -->
+            <a class="btn outline small" href="https://your-payment-link.example/1" target="_blank" rel="noopener">Pagar en línea</a>
+          </div>
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="product-card">
+          <img src="https://via.placeholder.com/600x400?text=Producto+2" alt="Producto 2" />
+          <h3>Producto 2</h3>
+          <p class="price">€49.00</p>
+          <p class="desc">Breve descripción del producto 2 — beneficio clave en una línea.</p>
+          <div class="card-ctas">
+            <a class="btn small" href="https://wa.me/COUNTRYCODENUMBER?text=Hola%20quiero%20comprar%20Producto%202">Comprar por WhatsApp</a>
+            <a class="btn outline small" href="https://your-payment-link.example/2" target="_blank" rel="noopener">Pagar en línea</a>
+          </div>
+        </article>
+
+        <!-- Producto 3 -->
+        <article class="product-card">
+          <img src="https://via.placeholder.com/600x400?text=Producto+3" alt="Producto 3" />
+          <h3>Producto 3</h3>
+          <p class="price">€15.00</p>
+          <p class="desc">Breve descripción del producto 3 — beneficio clave en una línea.</p>
+          <div class="card-ctas">
+            <a class="btn small" href="https://wa.me/COUNTRYCODENUMBER?text=Hola%20quiero%20comprar%20Producto%203">Comprar por WhatsApp</a>
+            <a class="btn outline small" href="https://your-payment-link.example/3" target="_blank" rel="noopener">Pagar en línea</a>
+          </div>
+        </article>
+
+        <!-- Producto 4 -->
+        <article class="product-card">
+          <img src="https://via.placeholder.com/600x400?text=Producto+4" alt="Producto 4" />
+          <h3>Producto 4</h3>
+          <p class="price">€79.00</p>
+          <p class="desc">Breve descripción del producto 4 — beneficio clave en una línea.</p>
+          <div class="card-ctas">
+            <a class="btn small" href="https://wa.me/COUNTRYCODENUMBER?text=Hola%20quiero%20comprar%20Producto%204">Comprar por WhatsApp</a>
+            <a class="btn outline small" href="https://your-payment-link.example/4" target="_blank" rel="noopener">Pagar en línea</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer / info -->
+    <footer class="site-footer container">
+      <p>&copy; <span id="year"></span> [Nombre de la tienda]. Atención por WhatsApp: <a href="https://wa.me/COUNTRYCODENUMBER">Contactar</a></p>
+    </footer>
+  </main>
+
+  <script>
+    // Ajustes simples: actualiza el año automáticamente
+    document.getElementById('year').innerText = new Date().getFullYear();
+
+    // Sugerencia: si quieres abrir WhatsApp en web o móvil, el link funciona en ambos.
+    // Reemplaza COUNTRYCODENUMBER por tu número (sin +, solo código país y número)
+    // Ejemplo: 34123456789 para +34 123 456 789
+  </script>
+</body>
+</html>
