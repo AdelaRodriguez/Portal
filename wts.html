@@ -1,0 +1,17 @@
+<script>
+  // Reemplaza con tu número (sin +)
+  const WHATSAPP_NUMBER = "34123456789";
+
+  function makeWhatsAppLink(productName, price) {
+    const text = `Hola, quiero comprar "${productName}". Precio: ${price}. Nombre: [Tu nombre]. Dirección: [Dirección completa]. ¿Hay stock?`;
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+  }
+
+  // Ejemplo: asignar al botón de producto con data-attrs
+  document.querySelectorAll('.product-card').forEach(card => {
+    const name = card.querySelector('h3').innerText;
+    const price = card.querySelector('.price').innerText;
+    const waBtn = card.querySelector('.card-ctas .btn.small');
+    if (waBtn) waBtn.href = makeWhatsAppLink(name, price);
+  });
+</script>
